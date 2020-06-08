@@ -43,15 +43,6 @@ import {CdkStepperModule} from '@angular/cdk/stepper';
 import {ClipboardModule} from '@angular/cdk/clipboard';
 import {A11yModule} from '@angular/cdk/a11y';
 
-const modules: any[] = [
-  MatFormFieldModule,
-  MatInputModule
-];
-
-// @NgModule({
-//   imports: [ ...modules ],
-//   exports: [ ...modules ]
-// })
 @NgModule({
   exports: [
     A11yModule,

@@ -8,9 +8,9 @@ export class MortgageService {
   public get mortgageCalculation(): MortgageCalculation {
     return {
       amortizationPeriod: this.amortizationPeriod,
-      amortizationPaymentNumber: this.amortizationPaymentNumber, // 300times
+      amortizationPaymentNumber: this.amortizationPaymentNumber,
       frequency: this.frequency,
-      payment: this.payment, // 542$
+      payment: this.payment,
       principalPayment: this.principalPayment,
       interest: this.interest,
       totalPayment: this.totalPayment,
@@ -55,13 +55,12 @@ export class MortgageService {
     this.amortizationPeriod = this.inputDate.find(
       item => item.name === 'amortizationPeriod').selectList.find(
       option => option.value === amortizationPeriod
-    ).name; // '25 years';
+    ).name;
     this.amortizationPaymentNumber = amortizationPeriod * paymentFrequency; // 300times
     this.frequency = this.inputDate.find(
       item => item.name === 'paymentFrequency').selectList.find(
       option => option.value === paymentFrequency
-    ).name; // 'monthly';
-    this.payment = 0; // 542$
+    ).name;
 
     const interestCalculated = (interestRate / 100) / 12;
     const interestCalculatedPow = Math.pow((1 + interestCalculated), amortizationPeriod * 12);
@@ -76,7 +75,7 @@ export class MortgageService {
     this.termPeriod = this.inputDate.find(
       item => item.name === 'term').selectList.find(
       option => option.value === term
-    ).name; // '5 years';
+    ).name;
     this.termPaymentNumber = term * paymentFrequency; // Calculated based on monthly payment
     this.termInterest = (this.interest / amortizationPeriod) * term;
     this.termTotalPayment = MonthlyPayment * term * 12;

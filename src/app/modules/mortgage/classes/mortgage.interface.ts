@@ -14,9 +14,9 @@ export class MortgageInterface {
 
 export interface MortgageCalculation {
   amortizationPeriod: string;
-  amortizationPaymentNumber: number; // 300times
+  amortizationPaymentNumber: number;
   frequency: string;
-  payment: number; // 542$
+  payment: number;
   principalPayment: number;
   interest: number;
   totalPayment: number;
