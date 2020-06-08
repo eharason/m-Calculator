@@ -1,0 +1,35 @@
+<ng-container *ngIf="calculationResult">
+  <div class="title">Mortgage Summary</div>
+  <div class="mortgage-summary" data-test="test-result">
+    <div class="amortization-period">
+      <span mat-card-subtitle>Over the {{calculationResult.amortizationPeriod}} amortization period, you will:</span>
+      <ul>
+        <li>have made {{calculationResult.amortizationPaymentNumber}} {{calculationResult.frequency}} payments
+          of {{calculationResult.payment | number:'1.00':'en-US'}} .
+        </li>
+        <li>have paid {{calculationResult.principalPayment | number:'1.00':'en-US'}} in principal, {{calculationResult.interest | number:'1.00':'en-US'}} in interest,
+          for
+          a total of {{calculationResult.totalPayment | number:'1.00':'en-US'}} .
+        </li>
+      </ul>
+    </div>
+    <div class="amortization-period">
+      <span mat-card-subtitle> Over {{calculationResult.termPeriod}} term, you will:</span>
+      <ul>
+        <li>have made {{calculationResult.termPaymentNumber | number:'1.00':'en-US'}} {{calculationResult.frequency}} payments
+          of {{calculationResult.payment | number:'1.00':'en-US'}} .
+        </li>
+        <li>have paid {{calculationResult.termPrincipalPayment | number:'1.00':'en-US'}} in principal, {{calculationResult.termInterest | number:'1.00':'en-US'}} in
+          interest,
+          for a total of {{calculationResult.termTotalPayment | number:'1.00':'en-US'}} .
+        </li>
+      </ul>
+    </div>
+    <div class="amortization-period">
+      <span mat-card-subtitle> At the end of your {{calculationResult.termPeriod}} term, you will:</span>
+      <ul>
+        <li>have a balance of {{ calculationResult.termEndBalance | number:'1.00':'en-US'}} .</li>
+      </ul>
+    </div>
+  </div>
+</ng-container>

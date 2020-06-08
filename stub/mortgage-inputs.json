@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "name": "MortgageAmount",
+      "label": "Mortgage Amount:",
+      "type": "number",
+      "maxlength": "20",
+      "placeHolder": 100000,
+      "errorCode": "Invalid Mortgage Amount",
+      "description": "The amount you expect to borrow from your financial institution. It is calculated as the purchase price of your home, minus the down payment plus any applicable mortgage loan insurance premium you have to pay."
+    },
+    {
+      "name": "InterestRate",
+      "label": "Interest Rate",
+      "type": "number",
+      "maxlength": "8",
+      "placeHolder": 5,
+      "errorCode": "Invalid Interest Rate",
+      "description": "Annual interest rate for this mortgage."
+    },
+    {
+      "name": "AmortizationPeriod",
+      "label": "Amortization Period: ",
+      "type": "select",
+      "selectList": [
+        "1 year",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "6 years",
+        "7 years",
+        "8 years",
+        "9 years",
+        "10 years",
+        "11 year",
+        "12 years",
+        "13 years",
+        "14 years",
+        "15 years",
+        "16 years",
+        "17 years",
+        "18 years",
+        "19 years",
+        "20 years",
+        "21 year",
+        "22 years",
+        "23 years",
+        "24 years",
+        "25 years",
+        "26 years",
+        "27 years",
+        "28 years",
+        "29 years",
+        "30 years"
+      ],
+      "placeHolder": 24,
+      "description": "The number of years and months over which you will repay this loan. The most common amortization period is 25 years. Not to be confused with the term of your loan, which is the duration of the loan agreement you signed with your financial institution and that has to be renewed regularly. Terms are generally for 1 to 10 years."
+    },
+    {
+      "name": "PaymentFrequency",
+      "label": "Payment Frequency: ",
+      "type": "select",
+      "selectList": [
+        "Accelerated Weekly",
+        "Weekly",
+        "Accelerated Bi-weekly",
+        "Bi-Weekly (every 2 weeks)",
+        "Semi-monthly (24x per year)",
+        "Monthly (12x per year)"
+      ],
+      "placeHolder": 1,
+      "description": "By choosing an accelerated payment frequency, you can reduce your amortization period and save thousands of dollars in interest in the long run. For example, the accelerated bi-weekly payment allows you to pay half of your monthly payment every two weeks. You will therefore make 26 payments a year, the equivalent of one extra monthly payment a year."
+    },
+    {
+      "name": "Term",
+      "label": "Term: ",
+      "type": "select",
+      "selectList": [
+        "1 year",
+        "2 years",
+        "3 years",
+        "4 years",
+        "5 years",
+        "6 years",
+        "7 years",
+        "8 years",
+        "9 years",
+        "10 years"
+      ],
+      "placeHolder": 4,
+      "description": "The number of term years."
+    },
+    {
+      "name": "Calculate",
+      "label": "Calculate: ",
+      "type": "submit"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+.basic-container {
+  padding: 30px 80px;
+  min-height: 100%;
+
+  @media(max-width: 768px) {
+  padding: 20px 30px;
+}
+
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}

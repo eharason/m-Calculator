@@ -1,0 +1,27 @@
+<div class="mortgage-form-container">
+  <div class="title">Mortgage Form</div>
+  <form [formGroup]="form" (submit)="onSubmit()" class="mortgage-form">
+    <div *ngFor="let input of formInputs">
+      <ng-container *ngIf="input.type === 'tel'; else selectInput;">
+        <mat-form-field class="mortgage-form-inputs" [ngClass]="input.name">
+          <mat-label>{{input.label}}</mat-label>
+          <input matInput [attr.data-test]="'test-' + input.name" [type]="input.type" [formControlName]="input.name" [maxLength]="input.maxlength" >
+          <mat-icon matSuffix *ngIf="input.name === 'interestRate'">%</mat-icon>
+        </mat-form-field>
+      </ng-container>
+      <ng-template #selectInput>
+        <mat-form-field>
+          <mat-label>{{input.label}}</mat-label>
+          <mat-select [attr.data-test]="'test-' + input.name" [formControlName]="input.name">
+            <mat-option *ngFor="let item of input.selectList" [value]="item.value">
+              {{item.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </ng-template>
+    </div>
+    <button mat-raised-button color="primary" type="submit" data-test="test-submit">Calculate</button>
+  </form>
+
+  <app-mortgage-result [calculationResult]="calculationResult"></app-mortgage-result>
+</div>
